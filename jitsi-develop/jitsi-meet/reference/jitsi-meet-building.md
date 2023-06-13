@@ -47,11 +47,18 @@ git version
 # 下载代码
 mkdir -p /root/jitsi/source
 cd /root/jitsi/source
-git clone xxx
+git clone git@github.com:jitsi/xxx.git
 
 # 更新代码
 cd /root/jitsi/source/xxx
+# 更新文件
 git pull
+# 查看状态
+git diff
+# 强制更新
+git checkout -f -B master remotes/origin/master --
+# 清理文件
+git clean -xdff
 
 # 构建代码
 cd /root/jitsi/source/xxx
